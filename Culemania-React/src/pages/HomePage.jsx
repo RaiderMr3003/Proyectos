@@ -1,10 +1,25 @@
-import React from 'react';
+import React from "react";
+import "../styles/pages/HomePage.css";
 
 function HomePage() {
   return (
-    <div>
-      <h1>Bienvenido a Culémania</h1>
-      <p>Todo sobre el FC Barcelona.</p>
+    <div className="home-page">
+      <div className="header-section">
+        <img
+          src="https://hch.tv/wp-content/uploads/2024/09/NUEVA-EQUIPACION-BARCELONA-FC2-1.jpg"
+          alt="Camp Nou"
+          className="header-image"
+        />
+        <div className="header-content">
+          <div className="header-text">
+            <h1>Més que un club</h1>
+            <p>
+              Bienvenidos al hogar de los culés, donde la pasión por el fútbol
+              se une con la historia y la tradición.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
