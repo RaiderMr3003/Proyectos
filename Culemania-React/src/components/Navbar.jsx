@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/components/Navbar.css";
 import FC_Barcelona from "../assets/img/FC_Barcelona.png";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       <h1 className="navbar-title">
@@ -14,18 +20,21 @@ function Navbar() {
         />
         CULÉMANIA
       </h1>
-      <ul className="navbar-links">
+      <button className="navbar-toggle" onClick={toggleMenu}>
+        <span className="navbar-toggle-icon">☰</span>
+      </button>
+      <ul className={`navbar-links ${isOpen ? "navbar-links-active" : ""}`}>
         <li>
-          <Link to="/">INICIO</Link>
+          <Link to="/" onClick={toggleMenu}>INICIO</Link>
         </li>
         <li>
-          <Link to="/noticias">NOTICIAS</Link>
+          <Link to="/noticias" onClick={toggleMenu}>NOTICIAS</Link>
         </li>
         <li>
-          <Link to="/plantilla">PLANTILLA</Link>
+          <Link to="/plantilla" onClick={toggleMenu}>PLANTILLA</Link>
         </li>
         <li>
-          <Link to="/historia">HISTORIA</Link>
+          <Link to="/historia" onClick={toggleMenu}>HISTORIA</Link>
         </li>
       </ul>
     </nav>

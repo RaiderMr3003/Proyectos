@@ -40,3 +40,20 @@
     margin-top: 10px;
     max-width: 500px;
 }
+
+@media (max-width: 768px) {
+    .header-text {
+        text-align: left;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .header-text h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+    .header-text p {
+        font-size: 1.2em;
+        margin-top: 10px;
+        max-width: 300px;
+    }
+}

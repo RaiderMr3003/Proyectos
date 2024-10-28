@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #001dd4;
+  background: linear-gradient(to right, #a50044, #004d98);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 1rem;
 }
 
@@ -32,10 +33,46 @@
     text-decoration: underline;
   }
 
-  
   .navbar-logo {
     width: 50px;
     margin-right: 0.5rem;
   }
   
-/* CSS para el grupo de búsqueda */
+/* Ocultar el menú en pantallas pequeñas */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .navbar-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Mostrar el menú cuando está activo */
+  .navbar-links-active {
+    display: flex;
+  }
+
+  /* Mostrar el botón de hamburger en pantallas pequeñas */
+  .navbar-toggle {
+    display: block;
+  }
+}
