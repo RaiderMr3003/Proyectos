@@ -18,7 +18,9 @@ function Navbar() {
           alt="FC Barcelona Logo"
           className="navbar-logo"
         />
-        CULÉMANIA
+        <Link to="/" className="navbar-title-link" onClick={toggleMenu}>
+          CULÉMANIA
+        </Link>
       </h1>
       <button className="navbar-toggle" onClick={toggleMenu}>
         <span className="navbar-toggle-icon">☰</span>
