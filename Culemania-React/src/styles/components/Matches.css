@@ -1,5 +1,5 @@
 .matches-container {
-  font: italic normal 400 16px Arial, Verdana, sans-serif;
+  font: italic normal 400 12px Arial, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   margin: 20px;
@@ -13,6 +13,7 @@
   width: 350px;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
+  margin-left: 20px;
 }
 
 .match-card:hover {
@@ -32,9 +33,8 @@
   align-items: center;
 }
 
-.match-tournament img {
-  margin-right: 10px;
-  width: 25px;
+.competition-logo {
+  width: 70px;
   height: auto;
 }
 
@@ -55,9 +55,8 @@
 }
 
 .team-name {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
-  text-transform: uppercase;
   transition: color 0.3s;
 }
 
@@ -72,3 +71,4 @@
   margin-top: 40%;
   font-weight: bold;
 }
+
