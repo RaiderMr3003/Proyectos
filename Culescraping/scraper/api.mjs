@@ -1,9 +1,14 @@
 import express from 'express';
+import cors from 'cors';
 import { scrapeMatches } from './matchscraper.mjs';
 import { scrapePlayers } from './playerscraper.mjs';
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors({
+    origin: 'http://localhost:5173', // La dirección de la aplicación cliente, se tiene que cambiar en función de la ubicación del servidor
+ }));
 
 app.get('/api/matches', async (req, res) => {
     try {
