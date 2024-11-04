@@ -10,7 +10,7 @@ export const scrapeMatches = async () => {
     const matches = await page.$$eval(
         '.fixture-result-list__link',
         (results) => (
-            results.map((el) => ({
+            results.slice(0, 25).map((el) => ({
                 fecha: el.querySelector('.fixture-result-list__fixture-date')?.innerText || 'Fecha no disponible',
                 hora: el.querySelector('.fixture-info__time')?.innerText || 'Hora no disponible',
                 competicion: {
