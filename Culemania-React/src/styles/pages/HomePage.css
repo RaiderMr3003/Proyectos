@@ -1,7 +1,6 @@
 .home-page {
     width: 100%;
     height: auto; 
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -16,7 +15,7 @@
   
 .header-image {
     width: 100%;
-    max-height: 90vh;
+    max-height: 91.5vh;
     object-fit: cover; 
     object-position: top; 
     filter: brightness(0.7);
@@ -57,4 +56,14 @@
         margin-top: 10px;
         max-width: 300px;
     }
+}
+
+.matches-section {
+    text-align: center;
+}
+
+.matches-header {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.5em;
 }

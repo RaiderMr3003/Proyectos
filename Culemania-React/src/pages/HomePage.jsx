@@ -15,13 +15,18 @@ function HomePage() {
           <div className="header-text">
             <h1>Més que un club</h1>
             <p>
-              Bienvenidos al hogar de los culés, donde la pasión por el fútbol se une con la historia y la tradición.
+              Bienvenidos al hogar de los culés, donde la pasión por el fútbol
+              se une con la historia y la tradición.
             </p>
           </div>
         </div>
       </header>
       <section className="matches-section">
-        <h2>Calendario</h2>
+        <header className="matches-header">
+          <h2>Calendario <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/calendario">
+            Ver todos los partidos
+          </a></h2>
+        </header>
         <Matches />
       </section>
     </main>
